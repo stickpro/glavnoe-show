@@ -1,0 +1,17 @@
+.d-flex {
+  display: flex;
+}
+.m-auto {
+  margin: auto;
+}
+.btn {
+  color: #ffffff;
+  background: #facf43;
+  border-radius: 4px;
+  letter-spacing: 0em;
+  padding: 20px 24px;
+  font-weight: 400;
+  border: none;
+  display: flex;
+  align-items: center;
+}
