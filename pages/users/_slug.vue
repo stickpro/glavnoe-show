@@ -17,7 +17,5 @@ export default {
 }
 </script>
 <style>
-.profile {
-    margin-left: 160px;
-}
+
 </style>

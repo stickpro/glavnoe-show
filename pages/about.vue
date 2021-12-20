@@ -7,9 +7,6 @@
   </section>
 </template>
 <style scoped>
-.about {
-  margin-left: 160px;
-}
 .about__title {
   width: 100%;
   text-align: center;

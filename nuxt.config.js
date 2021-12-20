@@ -42,7 +42,17 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/svg-sprite',
     '@nuxt/content',
+    'nuxt-mq'
   ],
+
+  'mq': {
+    defaultBreakpoint: 'sm',
+    breakpoints: {
+      sm: 768,
+      md: 1250,
+      lg: Infinity,
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

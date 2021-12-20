@@ -43,9 +43,6 @@ export default {
 </script>
 
 <style scoped>
-.users {
-  margin-left: 160px;
-}
 .user__title {
   width: 100%;
   text-align: center;

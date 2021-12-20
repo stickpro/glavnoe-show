@@ -21,4 +21,11 @@
   display: flex;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .header-logo {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+}
 </style>

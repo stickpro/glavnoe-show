@@ -17,6 +17,16 @@
           Показать трейлер
         </button>
       </div>
+      <div class="main__socials">
+        <a
+          v-for="(social, index) in socials"
+          :key="index"
+          target="_blank"
+          :href="social.link"
+        >
+          <svg-icon :name="social.icon" width="20" height="20" />
+        </a>
+      </div>
     </div>
     <div class="main-nav" ref="navigate">
       <ul class="nav-list">
@@ -65,6 +75,15 @@ export default {
         { name: "Улица", icon: "security-camera-svgrepo-com", type: "streat" },
       ],
       seletctFilter: null,
+      socials: [
+        { icon: "instagram", link: "https://www.instagram.com/glavnoe_show/" },
+        { icon: "vk", link: "https://vk.com/glavnoe_show" },
+        { icon: "tik-tok", link: "https://www.tiktok.com/@glavnoe_show" },
+        {
+          icon: "youtube",
+          link: "https://www.youtube.com/channel/UCKCtGfgij-PZa7MHoaQSB0A",
+        },
+      ],
       translations: [
         {
           name: "Камера 360 1",
@@ -152,9 +171,6 @@ export default {
 };
 </script>
 <style>
-.home {
-  margin-left: 160px;
-}
 .main-screen {
   height: 80vh;
   display: flex;
@@ -193,6 +209,7 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 30px;
+  flex-wrap: wrap;
 }
 .nav-list li {
   padding: 20px;
@@ -242,5 +259,13 @@ export default {
 .projects-leave-active {
   position: absolute;
   z-index: -1;
+}
+@media (max-width: 768px) {
+  .translations-item {
+    width: 90%;
+  }
+  .main-screen {
+    height: 60vh;
+  }
 }
 </style>

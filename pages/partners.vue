@@ -53,9 +53,6 @@ export default {
 };
 </script>
 <style>
-.parthners {
-  margin-left: 160px;
-}
 .parthners__title {
   width: 100%;
   text-align: center;
