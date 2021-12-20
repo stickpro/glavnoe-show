@@ -2,15 +2,27 @@
   <div class="menu-sidebar">
     <ul>
       <li>
-        <nuxt-link to="/" class="link link-active">
-        <svg-icon name="video-player-streaming-svgrepo-com" fill="#facf43" width="40" height="40" class="m-auto"/>
+        <nuxt-link to="/" class="link">
+        <svg-icon name="video-player-streaming-svgrepo-com" width="40" height="40" class="m-auto"/>
          Онлайн трансляции
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/" class="link">
-        <svg-icon name="users-svgrepo-com" fill="#fff" width="40" height="40" class="m-auto"/>
+        <nuxt-link to="/users" class="link">
+        <svg-icon name="users-svgrepo-com" width="40" height="40" class="m-auto"/>
          Участники
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/partners" class="link">
+        <svg-icon name="partner-handshake" width="50" height="50" class="m-auto"/>
+         Партнеры
+        </nuxt-link>
+      </li>
+      <li>
+        <nuxt-link to="/about" class="link">
+        <svg-icon name="more-info" width="50" height="50" class="m-auto"/>
+         О шоу
         </nuxt-link>
       </li>
     </ul>
@@ -23,6 +35,7 @@
   width: 160px;
   position: fixed;
   height: 100vh;
+  top: 95px;
   box-shadow: 19px 0px 32px -23px rgb(255 255 255 / 45%);
 }
 .link {
@@ -39,7 +52,13 @@
   min-height: 90px;
   border-top: 1px solid #f1f1f150;
 }
-.link-active {
+.link svg {
+  fill: #fff;
+}
+.link.nuxt-link-exact-active {
     color: #facf43;
+}
+.link.nuxt-link-exact-active svg {
+  fill: #facf43;
 }
 </style>

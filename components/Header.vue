@@ -13,6 +13,9 @@
 }
 .header-logo {
   width: 160px;
+  position: fixed;
+  top: 0;
+  background: #000;
 }
 .logo-link {
   display: flex;

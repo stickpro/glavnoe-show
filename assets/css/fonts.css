@@ -1,1 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Gabriela&display=swap');
+
+@font-face {
+  font-family: 'Intro';
+  src: url('../fonts/IntroDemo-BlackCAPS.otf') format('opentype');
+}
