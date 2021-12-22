@@ -26,7 +26,6 @@
         </a>
       </div>
     </div>
-
   </section>
 </template>
 <script>
@@ -92,5 +91,10 @@ export default {
   font-size: 16px;
   color: #000;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .parthners__item {
+    width: 50%;
+  }
 }
 </style>

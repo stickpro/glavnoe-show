@@ -266,6 +266,7 @@ export default {
   }
   .main-screen {
     height: 60vh;
+    background-position-y: 20%;
   }
 }
 </style>

@@ -10,8 +10,8 @@
     </button>
     <div class="menu-sidebar" :class="show ? 'show-menu' : ''">
       <ul>
-        <li>
-          <nuxt-link to="/" class="link">
+        <li @click="show = false">
+          <nuxt-link to="/" class="link" >
             <svg-icon
               name="video-player-streaming-svgrepo-com"
               width="40"
@@ -21,8 +21,8 @@
             Онлайн трансляции
           </nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/users" class="link">
+        <li @click="show = false">
+          <nuxt-link to="/users" class="link" >
             <svg-icon
               name="users-svgrepo-com"
               width="40"
@@ -32,8 +32,8 @@
             Участники
           </nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/partners" class="link">
+        <li @click="show = false">
+          <nuxt-link to="/partners" class="link" >
             <svg-icon
               name="partner-handshake"
               width="50"
@@ -43,8 +43,8 @@
             Партнеры
           </nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/about" class="link">
+        <li @click="show = false">
+          <nuxt-link to="/about" class="link" >
             <svg-icon name="more-info" width="50" height="50" class="m-auto" />
             О шоу
           </nuxt-link>
@@ -118,5 +118,6 @@ export default {
   position: absolute;
   top: 95px;
   width: 100%;
+  z-index: 100;
 }
 </style>
