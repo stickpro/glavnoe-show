@@ -2,11 +2,6 @@
   <section class="home">
     <div class="main-screen">
       <div class="main-description">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley
-        </p>
         <button class="btn">
           <svg-icon
             name="play-svgrepo-com"
@@ -27,6 +22,18 @@
           <svg-icon :name="social.icon" width="20" height="20" />
         </a>
       </div>
+    </div>
+    <div class="desctiprion__project">
+        <p>
+          Команда популярных блогеров проживает на вилле в Гаграх и проходит
+          подготовку к постановке ультрасовременного мюзикла в жанре -
+          "рейвсодия". Участников ждут захватывающие путешествия по красотам
+          природы Черноморского побережья. Ежедневные обучения творческим
+          навыкам и передача опыта своему коллективу. Интригующие события и
+          экстраординарные шоу внутри проекта. Здесь - настоящая и насыщенная
+          жизнь блогеров! Ты - можешь стать одним из нас! Подключайся и окажись
+          в доме с любимыми Блогерами
+        </p>
     </div>
     <div class="main-nav" ref="navigate">
       <ul class="nav-list">
@@ -175,7 +182,7 @@ export default {
   height: 80vh;
   display: flex;
   align-items: end;
-  justify-content: center;
+  justify-content: end;
   text-align: center;
   background-image: url(~/assets/img/Youtube_Main.jpg);
   background-repeat: no-repeat;
@@ -259,6 +266,11 @@ export default {
 .projects-leave-active {
   position: absolute;
   z-index: -1;
+}
+.desctiprion__project {
+  padding: 30px;
+  font-family: 'Intro';
+  text-align: center;
 }
 @media (max-width: 768px) {
   .translations-item {

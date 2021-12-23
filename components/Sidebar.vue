@@ -11,43 +11,16 @@
     <div class="menu-sidebar" :class="show ? 'show-menu' : ''">
       <ul>
         <li @click="show = false">
-          <nuxt-link to="/" class="link" >
-            <svg-icon
-              name="video-player-streaming-svgrepo-com"
-              width="40"
-              height="40"
-              class="m-auto"
-            />
-            Онлайн трансляции
-          </nuxt-link>
+          <nuxt-link to="/" class="link"> Онлайн трансляции </nuxt-link>
         </li>
         <li @click="show = false">
-          <nuxt-link to="/users" class="link" >
-            <svg-icon
-              name="users-svgrepo-com"
-              width="40"
-              height="40"
-              class="m-auto"
-            />
-            Участники
-          </nuxt-link>
+          <nuxt-link to="/users" class="link"> Участники </nuxt-link>
         </li>
         <li @click="show = false">
-          <nuxt-link to="/partners" class="link" >
-            <svg-icon
-              name="partner-handshake"
-              width="50"
-              height="50"
-              class="m-auto"
-            />
-            Партнеры
-          </nuxt-link>
+          <nuxt-link to="/partners" class="link"> Партнеры </nuxt-link>
         </li>
         <li @click="show = false">
-          <nuxt-link to="/about" class="link" >
-            <svg-icon name="more-info" width="50" height="50" class="m-auto" />
-            О шоу
-          </nuxt-link>
+          <nuxt-link to="/about" class="link"> О шоу </nuxt-link>
         </li>
       </ul>
     </div>
@@ -66,11 +39,15 @@ export default {
 <style scoped>
 .menu-sidebar {
   background: #000;
-  width: 160px;
+  width: 211px;
   position: fixed;
   height: 100vh;
-  top: 95px;
-  box-shadow: 19px 0px 32px -23px rgb(255 255 255 / 45%);
+  top: 0;
+  display: flex;
+}
+.menu-sidebar ul {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .link {
   display: flex;
@@ -79,15 +56,28 @@ export default {
   justify-content: center;
   justify-items: center;
   margin: auto;
-  font-family: "Gabriela", serif;
+  font-family: "Intro", serif;
   padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
   color: #fff;
+  text-shadow: 3px 6px 10px rgba(255, 255, 255, 0.45);
   text-decoration: none;
   min-height: 90px;
-  border-top: 1px solid #f1f1f150;
 }
 .link svg {
   fill: #fff;
+}
+.link:focus {
+  outline: none;
+}
+.link::after {
+  content: "";
+  display: block;
+  border: 1px solid #ffffff;
+  filter: blur(2px);
+  width: 61px;
+  margin: 12px auto;
 }
 .link.nuxt-link-exact-active {
   color: #facf43;

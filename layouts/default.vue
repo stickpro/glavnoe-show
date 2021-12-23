@@ -1,6 +1,6 @@
 <template>
   <main>
-    <Header />
+    <!-- <Header /> -->
     <Sidebar />
     <section class="content">
       <Nuxt />
@@ -19,7 +19,7 @@ export default {
 </script>
 <style scoped>
 .content {
-  margin-left: 160px;
+  margin-left: 211px;
 }
 @media (max-width: 768px) {
   .content {
