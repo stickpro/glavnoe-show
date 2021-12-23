@@ -221,6 +221,7 @@ export default {
     #000000 84.9%
   );
   min-height: 500px;
+  padding-bottom: 56px;;
 }
 .translations-item {
   width: 20%;

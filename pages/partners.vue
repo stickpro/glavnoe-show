@@ -97,7 +97,7 @@ export default {
 </script>
 <style>
 .parthners__container {
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
   background-color: #000;
   padding-bottom: 20px;
 }
