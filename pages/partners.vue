@@ -32,6 +32,22 @@
       <div class="parthners__title">
         <h1>презентация проекта</h1>
       </div>
+      <div class="parthners__presentation">
+        <client-only>
+          <splide >
+            <splide-slide v-for="id in sliders" :key="id">
+              <h1>{{ id }}</h1>
+              <img
+                :src="
+                  require(`~/assets/img/presentation/чингисхан_page-${id}.jpg`)
+                "
+                width="100%"
+                alt=""
+              />
+            </splide-slide>
+          </splide>
+        </client-only>
+      </div>
     </section>
   </div>
 </template>
@@ -54,6 +70,27 @@ export default {
         { name: "Cоюз блогеров", link: "https://sbr.team/", logo: "sbr.png" },
         { name: "Мэрия Гагр", link: "https://gagra.biz/", logo: "gagr.png" },
       ],
+      sliders: [
+        "0001",
+        "0002",
+        "0003",
+        "0004",
+        "0005",
+        "0006",
+        "0007",
+        "0008",
+        "0009",
+        "0010",
+        "0011",
+        "0012",
+        "0013",
+      ],
+      options: {
+        rewind: true,
+        width: 800,
+        perPage: 2,
+        gap: "1rem",
+      },
     };
   },
 };
@@ -62,6 +99,7 @@ export default {
 .parthners__container {
   min-height: 100vh;
   background-color: #000;
+  padding-bottom: 20px;
 }
 .parthners {
   padding: 0;
@@ -111,6 +149,15 @@ export default {
   font-size: 16px;
   color: #fff;
   text-decoration: none;
+}
+.parthners__presentation {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 15px #F72E1A;
+  border-radius: 52px;
+  padding: 16px;
+  margin-bottom: 20px;
 }
 @media (max-width: 768px) {
   .parthners__item {
