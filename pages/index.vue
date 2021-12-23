@@ -2,38 +2,16 @@
   <section class="home">
     <div class="main-screen">
       <div class="main-description">
-        <button class="btn">
+        <button class="btn btn-transparent">
           <svg-icon
             name="play-svgrepo-com"
-            fill="#fff"
+            fill="#FACF43"
             width="21"
             height="21"
           />
           Показать трейлер
         </button>
       </div>
-      <div class="main__socials">
-        <a
-          v-for="(social, index) in socials"
-          :key="index"
-          target="_blank"
-          :href="social.link"
-        >
-          <svg-icon :name="social.icon" width="20" height="20" />
-        </a>
-      </div>
-    </div>
-    <div class="desctiprion__project">
-        <p>
-          Команда популярных блогеров проживает на вилле в Гаграх и проходит
-          подготовку к постановке ультрасовременного мюзикла в жанре -
-          "рейвсодия". Участников ждут захватывающие путешествия по красотам
-          природы Черноморского побережья. Ежедневные обучения творческим
-          навыкам и передача опыта своему коллективу. Интригующие события и
-          экстраординарные шоу внутри проекта. Здесь - настоящая и насыщенная
-          жизнь блогеров! Ты - можешь стать одним из нас! Подключайся и окажись
-          в доме с любимыми Блогерами
-        </p>
     </div>
     <div class="main-nav" ref="navigate">
       <ul class="nav-list">
@@ -42,7 +20,7 @@
           :key="index"
           @click="(seletctFilter = nav.type), goto('navigate')"
         >
-          <svg-icon :name="nav.icon" width="60" height="60" />
+          <img :src="require(`~/assets/sprite/svg/${nav.icon}.svg`)" />
           {{ nav.name }}
         </li>
       </ul>
@@ -72,14 +50,14 @@ export default {
   data() {
     return {
       navigation: [
-        { name: "Все трансляции", icon: "camcoder", type: null },
-        { name: "Трансляции 360°", icon: "360", type: "360" },
+        { name: "Все трансляции", icon: "simple-camera", type: null },
+        { name: "Трансляции 360°", icon: "360icon", type: "360" },
         {
           name: "Обычне камеры",
-          icon: "video-camera-svgrepo-com",
+          icon: "simple-camera1",
           type: "default",
         },
-        { name: "Улица", icon: "security-camera-svgrepo-com", type: "streat" },
+        { name: "Улица", icon: "street", type: "streat" },
       ],
       seletctFilter: null,
       socials: [
@@ -178,11 +156,14 @@ export default {
 };
 </script>
 <style>
+.home {
+  background-color: #000;
+}
 .main-screen {
-  height: 80vh;
+  height: 55vh;
   display: flex;
   align-items: end;
-  justify-content: end;
+  justify-content: center;
   text-align: center;
   background-image: url(~/assets/img/Youtube_Main.jpg);
   background-repeat: no-repeat;
@@ -211,12 +192,16 @@ export default {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+.main-nav {
+}
 .nav-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 30px;
   flex-wrap: wrap;
+  color: #fff;
+  font-family: "Bebas Neue", cursive;
 }
 .nav-list li {
   padding: 20px;
@@ -230,6 +215,12 @@ export default {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  background: radial-gradient(
+    59.13% 59.13% at 48.84% 46.87%,
+    #f72e1a 0%,
+    #000000 84.9%
+  );
+  min-height: 500px;
 }
 .translations-item {
   width: 20%;
@@ -240,6 +231,7 @@ export default {
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
 }
 .card-image img {
   width: 100%;
@@ -247,6 +239,9 @@ export default {
 .card-title {
   padding: 10px;
   font-size: 18px;
+  position: absolute;
+  bottom: 10px;
+  background: #eee;
 }
 
 .flip-list-move {
@@ -269,8 +264,16 @@ export default {
 }
 .desctiprion__project {
   padding: 30px;
-  font-family: 'Intro';
+  font-family: "Intro";
   text-align: center;
+}
+.btn-transparent {
+  background-color: transparent;
+  border: 3px solid #facf43;
+  box-sizing: border-box;
+  border-radius: 19.5px;
+  font-family: "Intro";
+  box-shadow: 0px 0px 20px 5px rgb(250 207 67 / 50%);
 }
 @media (max-width: 768px) {
   .translations-item {

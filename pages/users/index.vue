@@ -1,9 +1,10 @@
 <template>
   <section class="users">
+    <div class="user__bg"></div>
     <div class="user__title">
       <h1>Участники</h1>
     </div>
-    <div class="users__list" v-if="hide">
+    <div class="users__list">
       <div class="users__item" v-for="(user, index) in users" :key="index">
         <div class="users__avatar">
           <img
@@ -15,21 +16,11 @@
         </div>
       </div>
     </div>
-    <div class="user__coming" v-else>
-      <div class="user__title">
-        Совсем скоро мы огласим список всех участников
-      </div>
-      <div class="timer">
-        <client-only>
-        <flip-countdown deadline="2021-12-22 00:00:00"></flip-countdown>
-        </client-only>
-      </div>
-    </div>
   </section>
 </template>
 <script>
 import usersData from "@/api/users/list.json";
-import FlipCountdown from 'vue2-flip-countdown'
+import FlipCountdown from "vue2-flip-countdown";
 export default {
   transition: "intro",
   components: { FlipCountdown },
@@ -43,11 +34,23 @@ export default {
 </script>
 
 <style scoped>
+.user__bg {
+  width: calc(100% - 221px);
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  background: linear-gradient(243.61deg, #000000 37.88%, #facf43 149.87%);
+}
 .user__title {
   width: 100%;
   text-align: center;
   font-size: 42px;
   margin-top: 16px;
+  color: #facf43;
+}
+.user__title h1 {
+  font-family: 'Intro';
 }
 .users__list {
   display: flex;
@@ -60,7 +63,7 @@ export default {
   width: 100%;
 }
 .users__item {
-  width: 20%;
+  width: 45%;
   transition: all 0.35s ease-in-out;
   border-color: rgba(0, 0, 0, 0.08);
   border-radius: 5px;

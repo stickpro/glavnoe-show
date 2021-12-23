@@ -1,32 +1,39 @@
 <template>
-  <section class="parthners">
-    <div class="parthners__title">
-      <h1>Партнеры</h1>
-    </div>
-    <div class="parthners__subtitle">
-      Партнеры шоу "Главная роль" - компании и бренды, которые поддерживают
-      общую идею и концепцию шоу, становясь его частью. Оказываемая партнёрами
-      поддержка позволяет воплотить большее количество проектов.
-    </div>
-    <div class="parthners__list">
-      <div
-        class="parthners__item"
-        v-for="(parthner, index) in parthners"
-        :key="index"
-      >
-        <a :href="parthner.link" class="parthners__card">
-          <img
-            :src="require(`~/assets/img/parthners/${parthner.logo}`)"
-            alt=""
-            width="120px"
-          />
-        </a>
-        <a :href="parthner.link">
-          <p>{{ parthner.name }}</p>
-        </a>
+  <div class="parthners__container">
+    <section class="parthners">
+      <div class="parthners__title">
+        <h1>Партнёры</h1>
       </div>
-    </div>
-  </section>
+      <div class="parthners__subtitle">
+        Партнеры шоу "Главная роль" - компании и бренды, которые поддерживают
+        общую идею и концепцию шоу, становясь его частью. Оказываемая партнёрами
+        поддержка позволяет воплотить большее количество проектов.
+      </div>
+      <div class="parthners__list">
+        <div
+          class="parthners__item"
+          v-for="(parthner, index) in parthners"
+          :key="index"
+        >
+          <a :href="parthner.link" class="parthners__card">
+            <img
+              :src="require(`~/assets/img/parthners/${parthner.logo}`)"
+              alt=""
+              width="120px"
+            />
+          </a>
+          <a :href="parthner.link">
+            <p>{{ parthner.name }}</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="parthners">
+      <div class="parthners__title">
+        <h1>презентация проекта</h1>
+      </div>
+    </section>
+  </div>
 </template>
 <script>
 export default {
@@ -52,20 +59,33 @@ export default {
 };
 </script>
 <style>
+.parthners__container {
+  min-height: 100vh;
+  background-color: #000;
+}
+.parthners {
+  padding: 0;
+}
 .parthners__title {
   width: 100%;
   text-align: center;
   font-size: 42px;
-  margin-top: 16px;
+  padding-top: 56px;
+  color: #fff;
+}
+.parthners__title h1 {
+  font-family: "Intro";
+  text-shadow: 0px 4px 20px #f72e1a;
 }
 .parthners__subtitle {
   width: 100%;
   text-align: center;
   font-size: 16px;
-
-  max-width: 400px;
+  color: #fff;
+  font-family: "Gabriela";
+  max-width: 600px;
   margin: auto;
-  margin-top: 16px;
+  margin-top: 56px;
 }
 .parthners__list {
   display: flex;
@@ -89,7 +109,7 @@ export default {
 }
 .parthners__item a {
   font-size: 16px;
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 @media (max-width: 768px) {
