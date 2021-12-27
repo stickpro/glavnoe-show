@@ -8,22 +8,24 @@
         height="26"
       />
     </button>
-    <div class="menu-sidebar" :class="show ? 'show-menu' : ''">
-      <ul>
-        <li @click="show = false">
-          <nuxt-link to="/" class="link"> Онлайн трансляции </nuxt-link>
-        </li>
-        <li @click="show = false">
-          <nuxt-link to="/users" class="link"> Участники </nuxt-link>
-        </li>
-        <li @click="show = false">
-          <nuxt-link to="/partners" class="link"> Партнеры </nuxt-link>
-        </li>
-        <li @click="show = false">
-          <nuxt-link to="/about" class="link"> О шоу </nuxt-link>
-        </li>
-      </ul>
-    </div>
+    <transition name="slide-fade">
+      <div class="menu-sidebar" :class="show ? 'show-menu' : ''">
+        <ul>
+          <li @click="show = false">
+            <nuxt-link to="/" class="link"> Онлайн трансляции </nuxt-link>
+          </li>
+          <li @click="show = false">
+            <nuxt-link to="/users" class="link"> Участники </nuxt-link>
+          </li>
+          <li @click="show = false">
+            <nuxt-link to="/partners" class="link"> Партнеры </nuxt-link>
+          </li>
+          <li @click="show = false">
+            <nuxt-link to="/about" class="link"> О шоу </nuxt-link>
+          </li>
+        </ul>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
@@ -91,7 +93,8 @@ export default {
 
 @media (max-width: 768px) {
   .menu-sidebar {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   .menu-activator {
     display: block;
@@ -104,10 +107,24 @@ export default {
 }
 .show-menu {
   height: auto;
-  display: block;
+  display: flex;
   position: absolute;
   top: 95px;
-  width: 100%;
   z-index: 100;
+  height: 100vh;
+  top: 0;
+  transform: translateX(0);
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active до версии 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

@@ -11,6 +11,14 @@
           />
           Показать трейлер
         </button>
+        <p class="main-text">
+          8 популярных блогеров ведут дневник по созданию рейв-мюзикла. Команда
+          блогеров с творческими навыками, проживает на вилле в Гаграх и
+          проходит подготовку к спектаклю. В реалити-шоу участники путешествия
+          по красотам природы Черноморского побережья. Ежедневные обучения
+          творческим навыкам и передача опыта своему коллективу. Интригующие
+          события и экстраординарные шоу внутри проекта.
+        </p>
       </div>
     </div>
     <div class="main-nav" ref="navigate">
@@ -20,8 +28,11 @@
           :key="index"
           @click="(seletctFilter = nav.type), goto('navigate')"
         >
-          <img :src="require(`~/assets/sprite/svg/${nav.icon}.svg`)" />
-          {{ nav.name }}
+          <img
+            class="nav-img"
+            :src="require(`~/assets/sprite/svg/${nav.icon}.svg`)"
+          />
+          <p>{{ nav.name }}</p>
         </li>
       </ul>
       <transition-group name="projects" tag="div" class="projects">
@@ -50,14 +61,14 @@ export default {
   data() {
     return {
       navigation: [
-        { name: "Все трансляции", icon: "simple-camera", type: null },
-        { name: "Трансляции 360°", icon: "360icon", type: "360" },
+        { name: "Все трансляции", icon: "main-cam", type: null },
+        { name: "Трансляции 360°", icon: "360main", type: "360" },
         {
           name: "Обычне камеры",
-          icon: "simple-camera1",
+          icon: "bi_camera",
           type: "default",
         },
-        { name: "Улица", icon: "street", type: "streat" },
+        { name: "Улица", icon: "et_streetsign", type: "streat" },
       ],
       seletctFilter: null,
       socials: [
@@ -160,7 +171,7 @@ export default {
   background-color: #000;
 }
 .main-screen {
-  height: 55vh;
+  height: 85vh;
   display: flex;
   align-items: end;
   justify-content: center;
@@ -176,7 +187,7 @@ export default {
 .main-description {
   color: #fff;
   text-align: center;
-  max-width: 500px;
+  max-width: 1024px;
   color: #facf43;
 }
 .main-description .btn {
@@ -191,6 +202,7 @@ export default {
   color: #fff;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding: 10px;
 }
 .main-nav {
 }
@@ -199,7 +211,8 @@ export default {
   justify-content: space-around;
   align-items: center;
   padding: 30px;
-  flex-wrap: wrap;
+  flex: 1;
+  overflow: auto;
   color: #fff;
   font-family: "Bebas Neue", cursive;
 }
@@ -209,6 +222,13 @@ export default {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+  justify-content: space-around;
+  min-height: 100px;
+  text-align: center;
+  min-width: 100px;
+}
+.nav-img {
+  margin-bottom: 20px;
 }
 .projects {
   display: flex;
@@ -229,10 +249,11 @@ export default {
 }
 .card {
   border-color: rgba(0, 0, 0, 0.08);
-  border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.06);
   position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.53);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .card-image img {
   width: 100%;
@@ -240,9 +261,11 @@ export default {
 .card-title {
   padding: 10px;
   font-size: 18px;
-  position: absolute;
-  bottom: 10px;
+  position: relative;
   background: #eee;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .flip-list-move {
@@ -278,11 +301,19 @@ export default {
 }
 @media (max-width: 768px) {
   .translations-item {
-    width: 90%;
+    width: 45%;
   }
   .main-screen {
     height: 60vh;
     background-position-y: 20%;
   }
+  .nav-list {
+    justify-content: normal;
+    padding-bottom: 0;
+  }
+}
+.main-text {
+  font-family: "PT Mono", monospace;
+  font-size: 16px;
 }
 </style>
