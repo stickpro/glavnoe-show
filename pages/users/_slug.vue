@@ -18,7 +18,7 @@
         <h1>{{ profile.name }}</h1>
         <div class="profile__subtitle">{{ profile.subtitle }}</div>
         <div class="profile__description">{{ profile.description }}</div>
-        <div class="profile__auditory">Аудитория: > {{ profile.auditory }}</div>
+        <div class="profile__auditory">Аудитория: > {{ profile.auditory }} человек</div>
         <div class="profile__social">
           <a
             :href="`https://tiktok.com/@${profile.tiktok}`"
