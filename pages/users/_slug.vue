@@ -73,7 +73,7 @@ export default {
   z-index: -1;
   top: 0;
   background-color: #000;
-  background-position: -144px center;
+  background-position: -144px bottom;
   background-repeat: no-repeat;
   padding: 0;
 }
@@ -110,8 +110,7 @@ export default {
 .profile__social {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
-  max-width: 300px;
+  gap: 35px;
 }
 .profile__mobile,
 .profile__subtitle-mobile {
