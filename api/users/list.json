@@ -1,43 +1,43 @@
 [
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Парвиз",
+    "slug": "parviz",
+    "avatar": "parvize.png"
 
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Мурад",
+    "slug": "murad",
+    "avatar": "murad.png"
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Каролина",
+    "slug": "karolina",
+    "avatar": "karolina.png"
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Бомбита",
+    "slug": "bombita",
+    "avatar": "bombita.png"
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Максим Высоцкий",
+    "slug": "maksim-vysockij",
+    "avatar": "maksim_vysockij.png"
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Макс Браун",
+    "slug": "maks-braun",
+    "avatar": "maks_braun.png"
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Валинья",
+    "slug": "valinya",
+    "avatar": "valinya.png"
   },
   {
-    "name": "Test",
-    "slug": "test",
-    "avatar": ""
+    "name": "Cекретный участник",
+    "slug": null,
+    "avatar": "anon.png"
   }
 ]
