@@ -44,9 +44,11 @@
           <a :href="`${profile.youtube}`" v-if="profile.youtube">
             <svg-icon name="yt" width="33" height="33" />
           </a>
-          </a>
           <a :href="`https://twitter.com/${profile.twitter}`" v-if="profile.twitter">
             <svg-icon name="twitter" width="33" height="33" />
+          </a>
+          <a :href="`https://likee.video/@${profile.like}`" v-if="profile.like">
+            <svg-icon name="like" width="33" height="33" />
           </a>
         </div>
       </div>

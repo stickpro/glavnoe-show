@@ -34,9 +34,8 @@
       </div>
       <div class="parthners__presentation">
         <client-only>
-          <splide >
+          <splide>
             <splide-slide v-for="id in sliders" :key="id">
-              <h1>{{ id }}</h1>
               <img
                 :src="
                   require(`~/assets/img/presentation/чингисхан_page-${id}.jpg`)
@@ -62,12 +61,21 @@ export default {
           logo: "allmyblog.png",
         },
         {
+          name: "Taradam",
+          link: "https://taradam.in/",
+          logo: "taradam-white-logo.png",
+        },
+
+        {
+          name: "Cоюз блогеров",
+          link: "https://sbr.team/",
+          logo: "sbr-transparant.png",
+        },
+        {
           name: "AdFinder",
           link: "https://adfinder.pro/",
           logo: "adfinder.png",
         },
-        { name: "Taradam", link: "https://taradam.in/", logo: "taradam.png" },
-        { name: "Cоюз блогеров", link: "https://sbr.team/", logo: "sbr.png" },
         { name: "Мэрия Гагр", link: "https://gagra.biz/", logo: "gagr.png" },
       ],
       sliders: [
@@ -112,16 +120,17 @@ export default {
   color: #fff;
 }
 .parthners__title h1 {
-  font-family: "Intro";
+  font-family: "Bebas Neue";
   text-shadow: 0px 4px 20px #f72e1a;
+  font-size: 48px;
 }
 .parthners__subtitle {
   width: 100%;
   text-align: center;
-  font-size: 16px;
+  font-size: 24px;
   color: #fff;
-  font-family: "Gabriela";
-  max-width: 600px;
+  font-family: "PT Mono";
+  max-width: 1098px;
   margin: auto;
   margin-top: 56px;
 }
@@ -152,9 +161,10 @@ export default {
 }
 .parthners__presentation {
   max-width: 1024px;
+  margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 10px 10px 15px #F72E1A;
+  box-shadow: 10px 10px 15px #f72e1a;
   border-radius: 52px;
   padding: 16px;
   margin-bottom: 20px;

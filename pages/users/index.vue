@@ -6,7 +6,7 @@
     </div>
     <div class="users__list">
       <div class="users__item" v-for="(user, index) in users" :key="index">
-        <nuxt-link :to="`users/${user.slug}`">
+        <nuxt-link :to="`users/${user.slug}`" v-if="user.slug">
           <div class="users__avatar">
             <img :src="require(`~/assets/img/avatar/${user.avatar}`)" />
           </div>
@@ -14,6 +14,14 @@
             {{ user.name }}
           </div>
         </nuxt-link>
+        <div v-else>
+          <div class="users__avatar">
+            <img :src="require(`~/assets/img/avatar/${user.avatar}`)" />
+          </div>
+          <div class="users__name">
+            {{ user.name }}
+          </div>
+        </div>
       </div>
     </div>
   </section>
