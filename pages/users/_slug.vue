@@ -147,6 +147,9 @@ export default {
     margin-left: -61px;
     margin-top: 26px;
   }
+  .kkv__avatar {
+    margin-right: -20px;
+  }
   .profile_bg {
     width: 100%;
   }

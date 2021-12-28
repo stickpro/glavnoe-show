@@ -24,6 +24,7 @@ export default {
 @media (max-width: 768px) {
   .content {
     margin-left: 0;
+    overflow: hidden;
   }
 }
 </style>
