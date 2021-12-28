@@ -98,4 +98,15 @@ export default {
 .timer {
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .users__item {
+    width: 44%;
+  }
+  .user__bg {
+    width: 100%;
+  }
+  .users {
+    background: #000;
+  }
+}
 </style>
