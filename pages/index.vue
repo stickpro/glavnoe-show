@@ -19,6 +19,32 @@
           творческим навыкам и передача опыта своему коллективу. Интригующие
           события и экстраординарные шоу внутри проекта.
         </p>
+        <div class="social__title">
+          Подключись и будь с нами в прямом эфире!
+        </div>
+        <div class="social__link">
+          <a href="https://www.tiktok.com/@glavnoe_show">
+            <svg-icon name="tik-tok" width="33px" height="33px" />
+          </a>
+          <a href="https://www.instagram.com/glavnoe_show/">
+            <svg-icon name="instagram" width="33px" height="33px" />
+          </a>
+          <a href="https://vk.com/glavnoe_show">
+            <svg-icon name="vk" width="33px" height="33px" />
+          </a>
+          <a href="https://t.me/glavnoe_show">
+            <svg-icon name="tg" width="33px" height="33px" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCKCtGfgij-PZa7MHoaQSB0A">
+            <svg-icon name="yt" width="33px" height="33px" />
+          </a>
+          <a href="https://www.facebook.com/groups/glavnoeshow">
+            <svg-icon name="fb" width="33px" height="33px" />
+          </a>
+          <a href="https://wa.me/79384554887">
+            <svg-icon name="wa" width="33px" height="33px" />
+          </a>
+        </div>
       </div>
     </div>
     <div class="main-nav" ref="navigate">
@@ -171,7 +197,7 @@ export default {
   background-color: #000;
 }
 .main-screen {
-  height: 85vh;
+  height: 100vh;
   display: flex;
   align-items: end;
   justify-content: center;
@@ -299,6 +325,13 @@ export default {
   font-family: "Intro";
   box-shadow: 0px 0px 20px 5px rgb(250 207 67 / 50%);
 }
+.social__title {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
 @media (max-width: 768px) {
   .translations-item {
     width: 45%;
@@ -315,5 +348,12 @@ export default {
 .main-text {
   font-family: "PT Mono", monospace;
   font-size: 16px;
+}
+.social__link {
+  gap: 32px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 </style>
