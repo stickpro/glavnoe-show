@@ -18,24 +18,33 @@
         <h1>{{ profile.name }}</h1>
         <div class="profile__subtitle">{{ profile.subtitle }}</div>
         <div class="profile__description">{{ profile.description }}</div>
-        <div class="profile__auditory">Аудитория: > {{ profile.auditory }} человек</div>
+        <div class="profile__auditory">
+          Аудитория: > {{ profile.auditory }} человек
+        </div>
         <div class="profile__social">
           <a
+            target="_blank"
             :href="`https://tiktok.com/@${profile.tiktok}`"
             v-if="profile.tiktok"
           >
             <svg-icon name="tik-tok" width="33" height="33" />
           </a>
           <a
+            target="_blank"
             :href="`https://instagram.com/${profile.instagram}`"
             v-if="profile.instagram"
           >
             <svg-icon name="instagram" width="33" height="33" />
           </a>
-          <a :href="`https://vk.com/${profile.vk}`" v-if="profile.vk">
+          <a
+            target="_blank"
+            :href="`https://vk.com/${profile.vk}`"
+            v-if="profile.vk"
+          >
             <svg-icon name="vk" width="33" height="33" />
           </a>
           <a
+            target="_blank"
             :href="`https://tg.me/${profile.telegram}`"
             v-if="profile.telegram"
           >
@@ -44,10 +53,18 @@
           <a :href="`${profile.youtube}`" v-if="profile.youtube">
             <svg-icon name="yt" width="33" height="33" />
           </a>
-          <a :href="`https://twitter.com/${profile.twitter}`" v-if="profile.twitter">
+          <a
+            target="_blank"
+            :href="`https://twitter.com/${profile.twitter}`"
+            v-if="profile.twitter"
+          >
             <svg-icon name="twitter" width="33" height="33" />
           </a>
-          <a :href="`https://likee.video/@${profile.like}`" v-if="profile.like">
+          <a
+            target="_blank"
+            :href="`https://likee.video/@${profile.like}`"
+            v-if="profile.like"
+          >
             <svg-icon name="like" width="33" height="33" />
           </a>
         </div>
