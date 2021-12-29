@@ -142,7 +142,7 @@ export default {
 @media (max-width: 768px) {
   .profile__mobile {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 4px;
     font-family: "Intro";
     display: block;
     width: 100%;
@@ -153,7 +153,10 @@ export default {
     font-size: 24px;
     display: block;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 24px;
+  }
+  .profile__info {
+    margin-top: 0;
   }
   .profile__info h1,
   .profile__subtitle {
@@ -169,6 +172,9 @@ export default {
   }
   .profile_bg {
     width: 100%;
+  }
+  .profile {
+    margin-top: 40px;
   }
 }
 </style>
