@@ -27,6 +27,7 @@
           </a>
         </div>
       </div>
+      <ParthnerModal />
     </section>
     <section class="parthners">
       <div class="parthners__title">
@@ -51,7 +52,9 @@
   </div>
 </template>
 <script>
+import ParthnerModal from "@/components/ParthnerModal"
 export default {
+  component: ['ParthnerModal'],
   data() {
     return {
       parthners: [
@@ -142,6 +145,7 @@ export default {
   align-items: center;
   max-width: 800px;
   margin: auto;
+  margin-bottom: 124px;
 }
 .parthners__item {
   width: 20%;

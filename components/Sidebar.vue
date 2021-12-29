@@ -23,6 +23,9 @@
           <li @click="show = false">
             <nuxt-link to="/about" class="link"> О шоу </nuxt-link>
           </li>
+          <li @click="show = false">
+            <nuxt-link to="/team" class="link"> Команда </nuxt-link>
+          </li>
         </ul>
       </div>
     </transition>
