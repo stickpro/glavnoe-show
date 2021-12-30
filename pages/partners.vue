@@ -52,9 +52,9 @@
   </div>
 </template>
 <script>
-import ParthnerModal from "@/components/ParthnerModal"
+import ParthnerModal from "@/components/ParthnerModal";
 export default {
-  component: ['ParthnerModal'],
+  component: ["ParthnerModal"],
   data() {
     return {
       parthners: [
@@ -176,6 +176,11 @@ export default {
 @media (max-width: 768px) {
   .parthners__item {
     width: 50%;
+  }
+  .parthners__subtitle {
+    width: auto;
+    margin-top: 7px;
+    padding: 23px;
   }
 }
 </style>

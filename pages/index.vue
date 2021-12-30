@@ -332,19 +332,6 @@ export default {
   letter-spacing: 0.04em;
   color: #ffffff;
 }
-@media (max-width: 768px) {
-  .translations-item {
-    width: 45%;
-  }
-  .main-screen {
-    height: 60vh;
-    background-position-y: 20%;
-  }
-  .nav-list {
-    justify-content: normal;
-    padding-bottom: 0;
-  }
-}
 .main-text {
   font-family: "PT Mono", monospace;
   font-size: 16px;
@@ -355,5 +342,20 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .translations-item {
+    width: 45%;
+  }
+  .main-screen {
+    background-position-y: 20%;
+  }
+  .nav-list {
+    justify-content: normal;
+    padding-bottom: 0;
+  }
+  .social__link {
+    gap: 20px;
+  }
 }
 </style>
