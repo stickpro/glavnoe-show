@@ -43,7 +43,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/svg-sprite',
     '@nuxt/content',
-    'nuxt-mq'
+    'nuxt-mq',
+    '@nuxtjs/yandex-metrika'
   ],
 
   'mq': {
@@ -53,6 +54,15 @@ export default {
       md: 1250,
       lg: Infinity,
     }
+  },
+
+  yandexMetrika: {
+    id: '87032049',
+    webvisor: true,
+    clickmap:true,
+    // useCDN:false,
+    trackLinks:true,
+    accurateTrackBounce:true,
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
