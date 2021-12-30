@@ -408,5 +408,8 @@ export default {
   .social__link {
     gap: 20px;
   }
+  .broadcast {
+    width: 100%;
+  }
 }
 </style>
