@@ -47,7 +47,7 @@
         </div>
       </div>
     </div>
-    <div class="main-nav" ref="navigate">
+    <div class="main-nav" ref="navigate" v-if="false">
       <ul class="nav-list">
         <li
           v-for="(nav, index) in navigation"
@@ -76,7 +76,36 @@
         </div>
       </transition-group>
     </div>
-    <div class=""></div>
+    <div class="broadcasts">
+      <div class="broadcast">
+        <h1>Бесплатная трансляции</h1>
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/Awpv-UW2-Ys"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="broadcast">
+        <h1>Голубой огонек с тиктокерами</h1>
+        <iframe
+          src="https://iframe.dacast.com/live/db64c826-f49e-9795-0093-c41798ebe5d4/96187f79-7555-0be7-88ce-3fdbd7634cc5"
+          width="100%"
+          height="100%"
+          frameborder="0"
+          scrolling="no"
+          allow="autoplay"
+          allowfullscreen
+          webkitallowfullscreen
+          mozallowfullscreen
+          oallowfullscreen
+          msallowfullscreen
+        ></iframe>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -195,6 +224,7 @@ export default {
 <style>
 .home {
   background-color: #000;
+  padding-bottom: 50px;
 }
 .main-screen {
   height: 100vh;
@@ -342,6 +372,27 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+}
+.broadcasts {
+  display: flex;
+  justify-content: center;
+  min-height: 800px;
+  gap: 44px;
+  background-color: #000;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+.broadcast {
+  width: 46%;
+}
+.broadcast h1 {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  padding: 20px;
+  font-family: "Intro", monospace;
 }
 @media (max-width: 768px) {
   .translations-item {
