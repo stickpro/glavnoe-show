@@ -232,6 +232,7 @@ export default {
   height: 100vh;
   display: flex;
   align-items: end;
+  -webkit-align-items: end;
   justify-content: center;
   text-align: center;
   background-image: url(~/assets/img/Youtube_Main.jpg);
@@ -402,7 +403,8 @@ export default {
   }
   .main-screen {
     background-position-y: 20%;
-    height: 80vh;
+    height: auto;
+    padding-top: 100%;
   }
   .nav-list {
     justify-content: normal;
