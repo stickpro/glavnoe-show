@@ -2,15 +2,7 @@
   <section class="home">
     <div class="main-screen">
       <div class="main-description">
-        <button class="btn btn-transparent">
-          <svg-icon
-            name="play-svgrepo-com"
-            fill="#FACF43"
-            width="21"
-            height="21"
-          />
-          Показать трейлер
-        </button>
+        <PresentationModal />
         <p class="main-text">
           8 популярных блогеров ведут дневник по созданию рейв-мюзикла. Команда
           блогеров с творческими навыками, проживает на вилле в Гаграх и
@@ -112,9 +104,11 @@
 </template>
 
 <script>
+import PresentationModal from '../components/PresentationModal.vue';
 export default {
   name: "IndexPage",
   transition: "intro",
+  component: ['PresentationModal'],
   data() {
     return {
       navigation: [
