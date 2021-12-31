@@ -410,5 +410,8 @@ export default {
   .broadcast {
     width: 100%;
   }
+  .broadcast iframe {
+    min-height: 400px;
+  }
 }
 </style>
