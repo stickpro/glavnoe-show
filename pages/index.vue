@@ -78,11 +78,12 @@
     </div>
     <div class="broadcasts">
       <div class="broadcast">
-        <h1>Бесплатная трансляции</h1>
+        <h1>Поздравление от блогеров в формате 360</h1>
+        <h1>с 22:00 до 00:30</h1>
         <iframe
           width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/Awpv-UW2-Ys"
+          height="56.25%"
+          src="https://www.youtube.com/embed/D_cG1YzDEKs"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -90,11 +91,12 @@
         ></iframe>
       </div>
       <div class="broadcast">
-        <h1>Голубой огонек с тиктокерами</h1>
+        <h1>Голубой огонек с тиктокерами в формате 360</h1>
+        <h1>с 00:30 до 06:00</h1>
         <iframe
           src="https://iframe.dacast.com/live/db64c826-f49e-9795-0093-c41798ebe5d4/96187f79-7555-0be7-88ce-3fdbd7634cc5"
           width="100%"
-          height="100%"
+          height="56.25%"
           frameborder="0"
           scrolling="no"
           allow="autoplay"
@@ -400,6 +402,7 @@ export default {
   }
   .main-screen {
     background-position-y: 20%;
+    height: 80vh;
   }
   .nav-list {
     justify-content: normal;
