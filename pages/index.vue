@@ -75,7 +75,7 @@
         <iframe
           width="100%"
           height="56.25%"
-          src="https://www.youtube.com/embed/D_cG1YzDEKs"
+          src="https://www.youtube.com/embed/D_cG1YzDEKs?playsinline=1"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
