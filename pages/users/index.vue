@@ -94,6 +94,7 @@ export default {
   font-size: 24px;
   margin-top: 20px;
   text-align: center;
+   font-family: 'Intro';
 }
 .timer {
   margin-top: 30px;

@@ -49,18 +49,18 @@ export default {
     return {
       commands: [
         {
-          avatar: "timur",
-          name: "Березицкий Тимур",
+          avatar: "vadim",
+          name: "Вадим",
           subtitle: "Режиссер-Оператор",
         },
         {
-          avatar: "nasty",
-          name: "Филиппова Анастасия",
-          subtitle: "Исполнительный продюсер",
+          avatar: "adam",
+          name: "Адам",
+          subtitle: "Линейный продюсер",
         },
         {
-          avatar: "lesy",
-          name: "Антуфьева Олеся",
+          avatar: "alisher",
+          name: "Алишер",
           subtitle: "Project manager",
         },
         {
@@ -159,6 +159,10 @@ export default {
   width: 33%;
   flex-grow: 1;
   text-align: center;
+}
+.commands__card img {
+  max-width: 216px;
+  max-height: 216px;
 }
 .commands__name {
   font-family: "Intro";
