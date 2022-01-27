@@ -108,6 +108,11 @@ export default {
 }
 .profile__avatar {
   margin-right: 165px;
+
+}
+.profile__avatar img {
+  max-width: 360px;
+  max-height: 360px;
 }
 .profile__info {
   max-width: 500px;
