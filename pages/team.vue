@@ -49,6 +49,16 @@ export default {
     return {
       commands: [
         {
+          avatar: "max",
+          name: "Max Make",
+          subtitle: "Директор",
+        },
+        {
+          avatar: "michail",
+          name: "Михаил",
+          subtitle: "Сенсей",
+        },
+        {
           avatar: "vadim",
           name: "Вадим",
           subtitle: "Режиссер-Оператор",
