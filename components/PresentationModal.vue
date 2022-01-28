@@ -10,7 +10,7 @@
                   <splide-slide v-for="id in sliders" :key="id">
                     <img
                       :src="
-                        require(`~/assets/img/presentation/чингисхан_page-${id}.jpg`)
+                        require(`~/assets/img/presentation/Чингисхан_page-${id}.jpg`)
                       "
                       width="100%"
                       alt=""
@@ -48,7 +48,6 @@ export default {
         "0010",
         "0011",
         "0012",
-        "0013",
       ],
       options: {
         rewind: true,
