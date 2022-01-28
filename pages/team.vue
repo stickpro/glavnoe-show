@@ -61,7 +61,7 @@ export default {
         {
           avatar: "vadim",
           name: "Вадим Ежов",
-          subtitle: "Режиссер-Оператор",
+          subtitle: "Главный режиссер шоу",
         },
         {
           avatar: "adam",
@@ -81,7 +81,7 @@ export default {
         {
           avatar: "dmitriy",
           name: "Дмитрий Чирков",
-          subtitle: "Режиссер-постановщик",
+          subtitle: "Сценарист, Режиссер-постановщик",
         },
         {
           avatar: "dmitriy_kotov",
